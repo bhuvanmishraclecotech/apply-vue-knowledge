@@ -1,7 +1,6 @@
 <template>
   <div>
-    <label class="text-center postLabel">POST</label>
-    <div class="border border-info p-3">
+    <div class="border border-info p-3 mt-4">
       <label>Name</label>
       <input v-model="name" class="form-control" />
       <label class="mt-3">Id</label>

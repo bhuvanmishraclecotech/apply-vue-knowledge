@@ -1,11 +1,5 @@
 <template>
-  <div class="container">
-      <div class="row mt-4">
-          <div class="col-6 offset-4">
-              <Response />
-          </div>
-      </div>
-  </div>
+  <Response />
 </template>
 
 <script>

@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-12">
-        <label class="forGetLabel text-center">GET</label>
         <div class="border border-info p-3">
           <label>Id :</label>
           <input v-model="id" class="form-control" type="number" />

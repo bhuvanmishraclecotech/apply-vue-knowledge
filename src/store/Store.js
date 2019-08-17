@@ -60,6 +60,10 @@ export default new Vuex.Store({
                         });
                         router.push('resultOnAnotherPage');
                     }
+                    else {
+                        router.push('resultOnAnotherPage'); 
+                        commit('setPostAndGetResponseSetToFalseAndErrorToTrue');
+                    }
                 })
         },
         sendPostRequest({ commit }, payload) {
@@ -74,6 +78,7 @@ export default new Vuex.Store({
                     }
                     else if (typeof (data.data) === "string") {
                         commit('setPostAndGetResponseSetToFalseAndErrorToTrue');
+                        router.push('resultOnAnotherPage');
                     }
                 })
         }
