@@ -4,10 +4,10 @@
       <div class="col-4">
         <Post />
       </div>
-      <div class="col-6">
+      <!-- <div class="col-6">
         <Response />
-      </div>
-      <div class="col-2">
+      </div> -->
+      <div class="col-2 offset-6">
         <Get />
       </div>
     </div>
