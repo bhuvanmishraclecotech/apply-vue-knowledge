@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
 import axios from 'axios';
+
+import router from '../router/Router';
 
 Vue.use(Vuex);
 
@@ -57,19 +58,21 @@ export default new Vuex.Store({
                             salary: data.data.employee_salary,
                             age: data.data.employee_age
                         });
+                        router.push('resultOnAnotherPage');
                     }
                 })
         },
         sendPostRequest({ commit }, payload) {
             axios.post('http://dummy.restapiexample.com/api/v1/create', payload)
                 .then((data) => {
-                    if (typeof(data.data)=== "object") {
+                    if (typeof (data.data) === "object") {
                         commit('setResponse', {
                             ...data.data,
                             method: "POST"
                         });
+                        router.push('resultOnAnotherPage');
                     }
-                    else if(typeof(data.data)=== "string") {
+                    else if (typeof (data.data) === "string") {
                         commit('setPostAndGetResponseSetToFalseAndErrorToTrue');
                     }
                 })
